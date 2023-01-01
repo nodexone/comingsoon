@@ -1,0 +1,65 @@
+
+
+<style>
+body { background: rgb(19, 19, 19) }
+
+.cmd {
+  position: relative;
+  display: inline-block;
+  font-family: 'Roboto Mono', monospace;
+  font-size: calc(1vw + 1.3vh);
+  line-height: calc(1vw + 1.3vh);
+  color: white;
+}
+
+
+
+.cmd::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1.7vw;
+  display: inline-block;
+  background-color: #404040;
+  vertical-align: top;
+  width: 1vw;
+  height:calc(1vw + 1.3vh);
+  -webkit-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+@keyframes blink {
+  0% { opacity: 1.0; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1.0; }
+}
+
+#host{
+  color:rgb(47, 187, 47);
+}
+
+#pwd{
+  color:#4040da;
+}
+
+#money{
+  color:#b33b3b;
+}
+
+.flex {
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet"> 
+<div class="flex">
+<div class="cmd"><span id="host">hello@nodexcapital</span>:<span id="pwd">~/</span><span id="money">$</span> echo "website under construction!" </div>
+</div>
